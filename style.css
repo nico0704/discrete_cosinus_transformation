@@ -40,7 +40,7 @@ textarea {
     border-radius: 10px;
     border-color: var(--border_color);
     float:left;
-    width: 35%;
+    width: 30%;
     height: 500px;
     padding: 20px 20px;
     margin-top: 1%;
@@ -48,7 +48,7 @@ textarea {
     border-radius: 10px;
     overflow-wrap: anywhere;
     font-weight:lighter;
-    font-size: 25px;
+    font-size: 23px;
     resize: none;
 }
 
@@ -63,7 +63,7 @@ button {
     border-color: var(--font_h1);
     margin-top: 10%;
     box-sizing:border-box;
-    width: 10%;
+    width: 20%;
     border-radius: 0%;
     font-weight:bold;
     font-size: 15px;
