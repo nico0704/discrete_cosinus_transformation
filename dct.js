@@ -3,7 +3,7 @@ const SIZE = 8;
 const RECIPROCAL_SQRT_2 = 1.0 / Math.sqrt(2);
 const PI = Math.PI;
 
-function run_dct() {
+function compute() {
     // handle input matrix
     const input = document.getElementById("input_matrix").value.replaceAll(" ", "");
     const input_arr_1_dim = input.split(",");
