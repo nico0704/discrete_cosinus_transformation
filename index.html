@@ -14,9 +14,156 @@
             <h1>DISCRETE COSINUS TRANSFORMATION</h1>
         </div>
     </header>
-    <textarea id="input_matrix" onfocus="this.value=''">107,109,115,107,113,115,115,113,24,24,24,8,16,8,16,20,16,24,16,16,24,16,16,24,16,28,16,16,28,16,24,32,16,28,24,24,32,24,24,36,24,28,24,24,28,24,24,28,16,20,16,16,28,16,24,32,8,12,8,8,8,8,8,8</textarea>
+    <div id="input_wrapper">
+        <input type="text" id="input_field_00" size="3" value="197">
+        <input type="text" id="input_field_01" size="3" value="208">
+        <input type="text" id="input_field_02" size="3" value="226">
+        <input type="text" id="input_field_03" size="3" value="198">
+        <input type="text" id="input_field_04" size="3" value="209">
+        <input type="text" id="input_field_05" size="3" value="227">
+        <input type="text" id="input_field_06" size="3" value="197">
+        <input type="text" id="input_field_07" size="3" value="210">
+        <br>
+        <input type="text" id="input_field_10" size="3" value="197">
+        <input type="text" id="input_field_11" size="3" value="208">
+        <input type="text" id="input_field_12" size="3" value="226">
+        <input type="text" id="input_field_13" size="3" value="198">
+        <input type="text" id="input_field_14" size="3" value="209">
+        <input type="text" id="input_field_15" size="3" value="227">
+        <input type="text" id="input_field_16" size="3" value="197">
+        <input type="text" id="input_field_17" size="3" value="208">
+        <br>
+        <input type="text" id="input_field_20" size="3" value="197">
+        <input type="text" id="input_field_21" size="3" value="209">
+        <input type="text" id="input_field_22" size="3" value="225">
+        <input type="text" id="input_field_23" size="3" value="199">
+        <input type="text" id="input_field_24" size="3" value="207">
+        <input type="text" id="input_field_25" size="3" value="226">
+        <input type="text" id="input_field_26" size="3" value="200">
+        <input type="text" id="input_field_27" size="3" value="208">
+        <br>
+        <input type="text" id="input_field_30" size="3" value="197">
+        <input type="text" id="input_field_31" size="3" value="208">
+        <input type="text" id="input_field_32" size="3" value="226">
+        <input type="text" id="input_field_33" size="3" value="198">
+        <input type="text" id="input_field_34" size="3" value="209">
+        <input type="text" id="input_field_35" size="3" value="227">
+        <input type="text" id="input_field_36" size="3" value="197">
+        <input type="text" id="input_field_37" size="3" value="208">
+        <br>
+        <input type="text" id="input_field_40" size="3" value="196">
+        <input type="text" id="input_field_41" size="3" value="209">
+        <input type="text" id="input_field_42" size="3" value="225">
+        <input type="text" id="input_field_43" size="3" value="199">
+        <input type="text" id="input_field_44" size="3" value="207">
+        <input type="text" id="input_field_45" size="3" value="226">
+        <input type="text" id="input_field_46" size="3" value="199">
+        <input type="text" id="input_field_47" size="3" value="208">
+        <br>
+        <input type="text" id="input_field_50" size="3" value="197">
+        <input type="text" id="input_field_51" size="3" value="209">
+        <input type="text" id="input_field_52" size="3" value="225">
+        <input type="text" id="input_field_53" size="3" value="197">
+        <input type="text" id="input_field_54" size="3" value="208">
+        <input type="text" id="input_field_55" size="3" value="226">
+        <input type="text" id="input_field_56" size="3" value="197">
+        <input type="text" id="input_field_57" size="3" value="209">
+        <br>
+        <input type="text" id="input_field_60" size="3" value="196">
+        <input type="text" id="input_field_61" size="3" value="209">
+        <input type="text" id="input_field_62" size="3" value="225">
+        <input type="text" id="input_field_63" size="3" value="197">
+        <input type="text" id="input_field_64" size="3" value="208">
+        <input type="text" id="input_field_65" size="3" value="226">
+        <input type="text" id="input_field_66" size="3" value="197">
+        <input type="text" id="input_field_67" size="3" value="209">
+        <br>
+        <input type="text" id="input_field_70" size="3" value="197">
+        <input type="text" id="input_field_71" size="3" value="209">
+        <input type="text" id="input_field_72" size="3" value="225">
+        <input type="text" id="input_field_73" size="3" value="197">
+        <input type="text" id="input_field_74" size="3" value="208">
+        <input type="text" id="input_field_75" size="3" value="226">
+        <input type="text" id="input_field_76" size="3" value="197">
+        <input type="text" id="input_field_77" size="3" value="209">
+        <h2>INPUT MATRIX</h2>
+    </div>
     <button id="run_dct" onclick="compute();">DCT</button>
-    <textarea id="output_matrix" readonly>output matrix...</textarea>
+
+    <div id="output_wrapper">
+        <input type="text" id="output_field_00" size="3">
+        <input type="text" id="output_field_01" size="3">
+        <input type="text" id="output_field_02" size="3">
+        <input type="text" id="output_field_03" size="3">
+        <input type="text" id="output_field_04" size="3">
+        <input type="text" id="output_field_05" size="3">
+        <input type="text" id="output_field_06" size="3">
+        <input type="text" id="output_field_07" size="3">
+        <br>
+        <input type="text" id="output_field_10" size="3">
+        <input type="text" id="output_field_11" size="3">
+        <input type="text" id="output_field_12" size="3">
+        <input type="text" id="output_field_13" size="3">
+        <input type="text" id="output_field_14" size="3">
+        <input type="text" id="output_field_15" size="3">
+        <input type="text" id="output_field_16" size="3">
+        <input type="text" id="output_field_17" size="3">
+        <br>
+        <input type="text" id="output_field_20" size="3">
+        <input type="text" id="output_field_21" size="3">
+        <input type="text" id="output_field_22" size="3">
+        <input type="text" id="output_field_23" size="3">
+        <input type="text" id="output_field_24" size="3">
+        <input type="text" id="output_field_25" size="3">
+        <input type="text" id="output_field_26" size="3">
+        <input type="text" id="output_field_27" size="3">
+        <br>
+        <input type="text" id="output_field_30" size="3">
+        <input type="text" id="output_field_31" size="3">
+        <input type="text" id="output_field_32" size="3">
+        <input type="text" id="output_field_33" size="3">
+        <input type="text" id="output_field_34" size="3">
+        <input type="text" id="output_field_35" size="3">
+        <input type="text" id="output_field_36" size="3">
+        <input type="text" id="output_field_37" size="3">
+        <br>
+        <input type="text" id="output_field_40" size="3">
+        <input type="text" id="output_field_41" size="3">
+        <input type="text" id="output_field_42" size="3">
+        <input type="text" id="output_field_43" size="3">
+        <input type="text" id="output_field_44" size="3">
+        <input type="text" id="output_field_45" size="3">
+        <input type="text" id="output_field_46" size="3">
+        <input type="text" id="output_field_47" size="3">
+        <br>
+        <input type="text" id="output_field_50" size="3">
+        <input type="text" id="output_field_51" size="3">
+        <input type="text" id="output_field_52" size="3">
+        <input type="text" id="output_field_53" size="3">
+        <input type="text" id="output_field_54" size="3">
+        <input type="text" id="output_field_55" size="3">
+        <input type="text" id="output_field_56" size="3">
+        <input type="text" id="output_field_57" size="3">
+        <br>
+        <input type="text" id="output_field_60" size="3">
+        <input type="text" id="output_field_61" size="3">
+        <input type="text" id="output_field_62" size="3">
+        <input type="text" id="output_field_63" size="3">
+        <input type="text" id="output_field_64" size="3">
+        <input type="text" id="output_field_65" size="3">
+        <input type="text" id="output_field_66" size="3">
+        <input type="text" id="output_field_67" size="3">
+        <br>
+        <input type="text" id="output_field_70" size="3">
+        <input type="text" id="output_field_71" size="3">
+        <input type="text" id="output_field_72" size="3">
+        <input type="text" id="output_field_73" size="3">
+        <input type="text" id="output_field_74" size="3">
+        <input type="text" id="output_field_75" size="3">
+        <input type="text" id="output_field_76" size="3">
+        <input type="text" id="output_field_77" size="3">
+        <h2>OUTPUT MATRIX</h2>
+    </div>
 </body>
 
 </html>

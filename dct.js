@@ -4,20 +4,14 @@ const RECIPROCAL_SQRT_2 = 1.0 / Math.sqrt(2);
 const PI = Math.PI;
 
 function compute() {
-    // handle input matrix
-    const input = document.getElementById("input_matrix").value.replaceAll(" ", "");
-    const input_arr_1_dim = input.split(",");
-    if (input_arr_1_dim.length != 64) {
-        console.log("Must be a 8x8 matrix.");
-        return;
-    }
-    const input_arr_2_dim = to_2_dim_arr(input_arr_1_dim);
+    // handle input
+    var input_arr_2_dim = get_input();
     console.log(input_arr_2_dim);
-    document.getElementById("input_matrix").innerHTML = display_matrix(input_arr_2_dim);
 
     // dct
+
     // create 8x8 Array and assign all values with 0
-    var result_matrix = Array(8).fill(0).map(x => Array(8).fill(0));
+    var result_matrix = Array(SIZE).fill(0).map(x => Array(SIZE).fill(0));
     var u, v, cu, cv, j, k, sum;
 
     for (u = 0; u < SIZE; u++) {
@@ -30,8 +24,10 @@ function compute() {
                 for (k = 0; k < SIZE; k++) {
                     // tmp -> f(j,k)
                     var tmp = input_arr_2_dim[j][k];
+
                     tmp *= Math.cos(((2 * j + 1) * u * PI) / 16);
                     tmp *= Math.cos(((2 * k + 1) * v * PI) / 16);
+
                     sum += tmp;
                 }
             }
@@ -39,16 +35,17 @@ function compute() {
         }
     }
     console.log(result_matrix);
-    document.getElementById("output_matrix").innerHTML = display_matrix(result_matrix);
+    display_output(result_matrix);
+    // end
 }
 
-function to_2_dim_arr(input_arr_1_dim) {
+function get_input() {
     var resultArray = [];
-    for (var i = 0; i < input_arr_1_dim.length; i += SIZE) {
+    for (var y = 0; y < SIZE; y++) {
         // store values for each row in an tmp array
         let tmp = [];
-        for (var j = i; j < i + SIZE; j++) {
-            tmp.push(input_arr_1_dim[j]);
+        for (var x = 0; x < SIZE; x++) {
+            tmp.push(document.getElementById("input_field_" + y + "" + x).value)
         }
         // push tmp array to 2 dim result array
         resultArray.push(tmp);
@@ -56,17 +53,11 @@ function to_2_dim_arr(input_arr_1_dim) {
     return resultArray;
 }
 
-function display_matrix(matrix) {
-    var res = "";
-    for (var x = 0; x < SIZE; x++) {
-        for (var y = 0; y < SIZE; y++) {
-            if (y == SIZE - 1) {
-                res += matrix[x][y];
-            } else {
-                res += matrix[x][y] + "\t";
-            }
+function display_output(result_matrix) {
+    for (var y = 0; y < SIZE; y++) {
+        for (var x = 0; x < SIZE; x++) {
+            var output_field = document.getElementById("output_field_" + y + "" + x);
+            output_field.value = result_matrix[y][x];
         }
-        res += "\n";
     }
-    return res;
 }
