@@ -83,3 +83,11 @@ button {
     font-weight:lighter;
     font-size: 23px;
 }
+
+input[type=text] {
+    text-align: center;
+    background-color: var(--primary);
+    color: var(--font_body);
+    border-color: var(--border_color);
+    border-style: solid;
+  }
